@@ -70,4 +70,9 @@ public class LaunchActivity extends AppCompatActivity implements LaunchView {
                 )
         );
     }
+
+    @Override
+    protected void onResume() {
+        presenter.showHighScore();
+    }
 }
