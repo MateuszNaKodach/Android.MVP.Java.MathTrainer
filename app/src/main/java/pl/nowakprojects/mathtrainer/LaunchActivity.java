@@ -62,7 +62,7 @@ public class LaunchActivity extends AppCompatActivity implements LaunchView {
 
     @Override
     public void showHighScore() {
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = this.getSharedPreferences("pl.nowakprojects.mathtrainer",Context.MODE_PRIVATE);
         highScoreTextView.setText(
                 getString(R.string.current_high_score,
                 sharedPref.getInt(getString(R.string.high_score_correct),0),

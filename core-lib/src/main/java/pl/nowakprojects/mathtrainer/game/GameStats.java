@@ -6,6 +6,8 @@ import com.udojava.evalex.Expression;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import pl.nowakprojects.mathtrainer.util.Const;
 

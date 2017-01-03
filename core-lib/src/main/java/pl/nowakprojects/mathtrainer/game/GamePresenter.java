@@ -69,10 +69,10 @@ public class GamePresenter implements MvpPresenter<GameView>{
     }
 
     public void finishGame(){
+        gameView.saveHighScore(gameStats.getCorrectAnswers(),gameStats.getAllQuestions());
         gameView.showScoresAtTheEnd();
         gameView.disableGameBoard();
         gameView.showPlayAgainButton();
-        gameView.saveHighScore(gameStats.getCorrectAnswers(),gameStats.getAllQuestions());
     }
 
 }

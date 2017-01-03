@@ -148,13 +148,13 @@ public class GameActivity extends AppCompatActivity implements GameView{
 
     @Override
     public void saveHighScore(int correctAnswers, int allQuestions) {
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = this.getSharedPreferences("pl.nowakprojects.mathtrainer",Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
 
         int currentHighScore = sharedPref.getInt(getString(R.string.high_score_correct), 0);
         if(correctAnswers>currentHighScore) {
             editor.putInt(getString(R.string.high_score_correct), correctAnswers);
-            editor.putInt(getString(R.string.high_score_all), correctAnswers);
+            editor.putInt(getString(R.string.high_score_all), allQuestions);
         }
 
         editor.apply();
